@@ -25,7 +25,7 @@ try:
             )
         print('Received and deleted message: %s' % message)
         data = pd.json_normalize(data_dict) # Flatten the json to a flat table.
-        data.to_csv(r'./products.csv', mode='a') # Write the data to a csv file
+        data.to_csv(r'./products.csv', mode='a', index=False) # Write the data to a csv file
         s3.meta.client.upload_file('./products.csv', '<change-me>', 'products.csv') # Upload the csv to S3
 
 except TypeError:
