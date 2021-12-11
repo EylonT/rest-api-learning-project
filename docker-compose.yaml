@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  producer:
+    container_name: producer
+    build: ./Producer
+    ports:
+      - "5000:5000"
+    volumes:
+      - $HOME/.aws:/home/developer/.aws:ro
+  consumer:
+    container_name: consumer
+    build: ./Consumer
+    volumes:
+      - $HOME/.aws:/home/developer/.aws:ro
