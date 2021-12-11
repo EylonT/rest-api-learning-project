@@ -8,8 +8,8 @@
 
 ## Installation steps:
 
-1. Upload the architecture.yaml to cloudformation and choose a S3 bucket name.
-2. Navigate to Consumer/Consumer.py and change the bucket name in "change me" section.
+1. Upload the architecture.yaml to cloudformation and choose a S3 bucket name, and wait for the stack to complete.
+2. Navigate to Consumer/Consumer.py and change the bucket name in the "change me" section.
 3. Run docker-compose up -d
 4. Open an API client (postman/curl/custom client app)
 5. POST to http://127.0.0.1:5000/api
